@@ -3,11 +3,6 @@ library(haven)
 library(tidyverse)
 library(gt)
 
-# Carregar pacotes necessários
-library(haven)
-library(tidyverse)
-library(gt)
-
 # Importar os dados
 dados <- read_dta("data.dta") %>% as_tibble()
 
@@ -82,5 +77,5 @@ tabelas_gt <- list(
 )
 
 # Salvar as tabelas em um arquivo RData para carregamento no Quarto
-save(tabelas_gt, file = "tabelas_processadas.RData")
+save(tabelas_gt, file = "Relatório/tabelas_processadas.RData")
 

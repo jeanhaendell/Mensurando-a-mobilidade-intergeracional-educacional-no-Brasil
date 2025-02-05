@@ -50,3 +50,33 @@ tabelas_gt$q001
 ```{r}
 tabelas_gt$q002
 ```
+
+## 
+
+## Gráficos de Densidade
+
+### Distribuição das Notas do ENEM por Sexo
+
+```{r}
+knitr::include_graphics("grafico_densidade_sexo.png")
+
+
+```
+
+### Distribuição das Notas do ENEM por Tipo de Escola
+
+```{r}
+knitr::include_graphics("grafico_densidade_escola.png")
+```
+
+### Distribuição das Notas do ENEM por Raça
+
+```{r}
+knitr::include_graphics("grafico_densidade_raca.png")
+```
+
+### Distribuição das Notas do ENEM por Escolaridade dos Pais
+
+```{r}
+knitr::include_graphics("grafico_densidade_pais.png")
+```
