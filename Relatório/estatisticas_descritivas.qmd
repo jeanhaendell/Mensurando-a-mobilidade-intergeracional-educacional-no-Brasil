@@ -80,3 +80,9 @@ knitr::include_graphics("grafico_densidade_raca.png")
 ```{r}
 knitr::include_graphics("grafico_densidade_pais.png")
 ```
+
+## Tabela contendo as estimativas de β e α
+
+```{r}
+knitr::include_graphics("tabela_resultados.png")
+```
