@@ -104,6 +104,20 @@ ui <- dashboardPage(
       # 📌 Aba Comparação entre Grupos
       tabItem(tabName = "grupos",
               fluidRow(
+                box(
+                  title = "Descrição da Comparação entre Grupos",
+                  width = 12,
+                  status = "primary",
+                  solidHeader = TRUE,
+                  p(strong("Escolas: Pública vs. Privada"), 
+                    "O coeficiente positivo e significativo para escola_privada (0.219) indica que estudantes de escolas privadas tendem a ter um ranking mais alto no ENEM em relação aos de escolas públicas, independentemente da escolaridade dos pais. O efeito do ranking dos pais (rank_pais_media) é significativo (0.326), sugerindo que a escolaridade dos pais tem um impacto positivo sobre o desempenho dos filhos. No entanto, a interação entre rank_pais_media e escola_privada (-0.030) não é estatisticamente significativa (p = 0.324), sugerindo que o impacto da escolaridade dos pais sobre o desempenho dos filhos é semelhante entre alunos de escolas públicas e privadas."),
+                  p(strong("Raça: Branca vs. Preta"), 
+                    "O coeficiente negativo para preta (-0.040) indica que estudantes pretos tendem a ter um ranking inferior no ENEM em comparação com estudantes brancos, controlando pela escolaridade dos pais. O efeito da escolaridade dos pais (rank_pais_media) é forte e significativo (0.455), indicando que quanto maior o nível educacional dos pais, melhor o desempenho dos filhos. A interação rank_pais_media:preta (-0.084) também é significativa, sugerindo que o efeito da escolaridade dos pais sobre o desempenho dos filhos é menor para estudantes pretos do que para brancos, evidenciando uma desigualdade na mobilidade educacional entre os grupos raciais."),
+                  p(strong("Sexo: Feminino vs. Masculino"), 
+                    "O coeficiente positivo para masculino (0.036) sugere que, em média, estudantes do sexo masculino têm um ranking ligeiramente superior no ENEM em comparação com estudantes do sexo feminino. O efeito da escolaridade dos pais (rank_pais_media = 0.485) continua forte e significativo. No entanto, a interação rank_pais_media:masculino (-0.073) é significativa e negativa, indicando que o efeito da escolaridade dos pais sobre o desempenho dos filhos é menor para meninos do que para meninas. Isso pode sugerir que a mobilidade educacional é mais forte entre estudantes do sexo feminino.")
+                )
+              ),
+              fluidRow(
                 box(title = "Comparação entre Grupos", width = 12, 
                     tags$iframe(src = "www/tabela_resultados_grupos.html", width = "100%", height = "600px"))
               )
@@ -112,6 +126,18 @@ ui <- dashboardPage(
       # 📌 Aba Faixa Etária e Renda
       tabItem(tabName = "faixa_renda",
               fluidRow(
+                box(
+                  title = "Descrição de Faixa Etária e Renda",
+                  width = 12,
+                  status = "primary",
+                  solidHeader = TRUE,
+                  p("O coeficiente de rank_pais_media (0.318) confirma que a escolaridade dos pais tem um impacto positivo e significativo sobre o desempenho dos filhos, ou seja, quanto maior a posição dos pais no ranking educacional, melhor tende a ser a nota dos filhos."),
+                  p("A variável rank_idade (0.054) também apresenta um efeito positivo e significativo, sugerindo que alunos mais velhos tendem a ter um desempenho ligeiramente superior no ENEM. Isso pode estar relacionado a uma maior maturidade ou tempo adicional de estudo."),
+                  p("Já rank_renda (0.204) indica que a renda familiar tem um impacto relevante sobre a nota no ENEM, reforçando a importância do contexto socioeconômico no desempenho educacional."),
+                  p("Todos os coeficientes são estatisticamente significativos (p < 0.01), indicando que essas variáveis influenciam de maneira consistente os resultados dos estudantes.")
+                )
+              ),
+              fluidRow(
                 box(title = "Faixa Etária & Renda", width = 12, 
                     tags$iframe(src = "www/tabela_resultados_completo.html", width = "100%", height = "600px"))
               )
@@ -119,6 +145,15 @@ ui <- dashboardPage(
       
       # 📌 Aba Resultados por Estado (GRÁFICO DE BARRAS)
       tabItem(tabName = "estados",
+              fluidRow(
+                box(
+                  title = "Observação",
+                  width = 12,
+                  status = "primary",
+                  solidHeader = TRUE,
+                  p("Não há uma relação clara entre relação entre a mobilidade intergeracional educacional e informações que conheço desses estados.")
+                )
+              ),
               fluidRow(
                 box(title = "Coeficientes do Modelo Rank-Rank por Estado", width = 12, imageOutput("grafico_resultados_estados"))
               )
