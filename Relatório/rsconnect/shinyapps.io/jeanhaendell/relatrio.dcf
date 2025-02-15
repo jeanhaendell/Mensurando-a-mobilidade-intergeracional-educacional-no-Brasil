@@ -1,0 +1,10 @@
+name: relatrio
+title:
+username: jeanhaendell
+account: jeanhaendell
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14009409
+bundleId: 9805466
+url: https://jeanhaendell.shinyapps.io/relatrio/
+version: 1
